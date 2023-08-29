@@ -1,0 +1,28 @@
+<html><!-- 配布資料の10-2/enquete.html -->
+  <head>
+    <meta charset="UTF-8">
+    <title>アンケート送信テスト</title>
+  </head>
+  <body>
+    <h1>アンケートフォーム</h1>
+    <form action="post.php" method="post">
+      <p>お名前：<input type="text" name="name" placeholder="名前をお書きください" ></p>
+      <p>性別：<!-- $_POST['gender']-->
+        <input type="radio" name="gender" value="man"> 男性
+        <input type="radio" name="gender" value="woman"> 女性
+      </p>
+      <p>評価：
+        <select name="star">
+          <option value="1">★☆☆☆☆</option>
+          <option value="2">★★☆☆☆</option>
+          <option value="3">★★★☆☆</option>
+          <option value="4">★★★★☆</option>
+          <option value="5">★★★★★</option>
+        </select>
+      </p>
+      <p>ご意見</p><!-- $_POST['other']-->
+      <p><textarea name="other" placeholder="ご要望をお書きください"></textarea></p>
+      <input type="submit" value="送信">
+    </form>
+  </body>
+</html>
